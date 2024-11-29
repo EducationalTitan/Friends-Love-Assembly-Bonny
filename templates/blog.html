@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Friends Love Assembly</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Blog Posts</h1>
+    <div>
+        {% for post in posts %}
+            <div class="post">
+                <h2>{{ post.title }}</h2>
+                {% if post.image %}
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}" style="max-width: 100%;">
+                {% endif %}
+                <p>{{ post.content }}</p>
+                <p><small>Posted on {{ post.created_at }}</small></p>
+            </div>
+        {% endfor %}
+        {% if user.is_authenticated %}
+        {% else %}
+    <p>You must be logged in to view the blog. <a href="{% url 'login' %}">Log in</a></p>
+        {% endif %}
+    </div>
+    <a href="{% url 'create_blog_post' %}" class="btn btn-primary">Create New Post</a>
+</body>
+</html>

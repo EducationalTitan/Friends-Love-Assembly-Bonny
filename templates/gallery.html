@@ -1,0 +1,642 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Friends Love Assembly</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Include Custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/6I5Z2N4Z5boHGvYd3io38A2s/QfRvH+u06OZyT" crossorigin="anonymous">
+
+    <style>
+        /* Custom Colors */
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        h1 {
+            color: #ff4d4d; /* Red */
+            font-family: 'Arial', sans-serif;
+        }
+
+        p {
+            color: #ff99cc; /* Pink */
+            font-size: 2.1rem;
+        }
+
+        .btn-primary {
+            background-color: #ffa500; /* Yellow */
+            border-color: #ffb84d;
+        }
+
+        .btn-primary:hover {
+            background-color: #ffcc00;
+        }
+
+        .hero {
+            background-image: url('{% static "images/bk.jpg" %}'); /* Replace with your hero image path */
+            background-size: cover;
+            background-position: center;
+            height: 200px; /* Height of the hero section */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .gallery-item img {
+            width: 200%;
+            max-width: 600px; /* Limit image size */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+</head>
+<body>
+      <div class="hero">
+        <div class="text-center">
+            <h1>Welcome to the Friends Love Assembly Gallery</h1>
+            <p>Explore our cherished moments and events!</p>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="text-center">
+            <a href="{% url 'home' %}" class="btn btn-primary btn-lg rounded-pill shadow-sm px-5">Home</a>
+        </div>
+
+        <div class="row gallery-container">
+            <!-- Image 1 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/452248018_2925416777596735_2140871279061489538_n.jpg' %}" alt="Event 1" class="img-fluid rounded">
+                    <figcaption>Congress Meeting: Mercy (Director of Treasury) and Felicia</figcaption>
+                </figure>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/452404449_2925416177596795_7502196726690703694_n.jpg' %}" alt="Event 2" class="img-fluid rounded">
+                    <figcaption>Congress Meeting: Gift (Deputy Mayor), Mercy (Director of Treasury), Felicia and Ibelema</figcaption>
+                </figure>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/452429041_2925416644263415_3949373136594000118_n.jpg' %}" alt="Event 3" class="img-fluid rounded">
+                    <figcaption>Congress Meeting: Mrs. Uwakwe</figcaption>
+                </figure>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/456442232_2951634421641637_8069392225796996300_n.jpg' %}" alt="Event 4" class="img-fluid rounded">
+                    <figcaption>Birthday Voucher: Gift presentation to Wilcox Kingsley (Chief Scribe)</figcaption>
+                </figure>
+            </div>
+
+
+            <!-- Image 5 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/452456825_2925415864263493_3468946099783673354_n.jpg' %}" alt="Event 5" class="img-fluid rounded">
+                    <figcaption>Congress Meeting: The Mayor(Awongo) on spotlight</figcaption>
+                </figure>
+            </div>
+
+           <!-- Image 6 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/452585047_2925416684263411_997570313960126080_n.jpg' %}" alt="Event 5" class="img-fluid rounded">
+                    <figcaption>Congress Meeting: Happiness is rooted in FLA</figcaption>
+                </figure>
+            </div>
+
+
+            <!-- Image 7 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/456380534_2951634371641642_2118830277467514263_n.jpg' %}" alt="Event 5" class="img-fluid rounded">
+                    <figcaption>Birthday Voucher: Gift presentation to Gift Jumbo(Founder)</figcaption>
+                </figure>
+            </div>
+
+
+            <!-- Image 8 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/456564059_2951634298308316_1815271191492140172_n.jpg' %}" alt="Event 5" class="img-fluid rounded">
+                    <figcaption>Birthday Voucher: Gift presentation to Happiness Alozie</figcaption>
+                </figure>
+            </div>
+
+              <!-- Image 9 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/457400001_2963486357123110_619534637402012871_n.jpg' %}" alt="Event 5" class="img-fluid rounded">
+                    <figcaption>Birthday Voucher: Gift presentation to Mrs. Gladys Uwakwe</figcaption>
+                </figure>
+            </div>
+
+            <!-- Image 10 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/457669542_2963479177123828_654475823902299885_n.jpg' %}" alt="Event 5" class="img-fluid rounded">
+                    <figcaption>Birthday Voucher</figcaption>
+                </figure>
+            </div>
+
+
+            <!-- Image 11-->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/458079216_2963532513785161_7134940413794692053_n.jpg' %}" alt="Event 5" class="img-fluid rounded">
+                    <figcaption>Funeral Service: Gift, Felicia and Mercy</figcaption>
+                </figure>
+            </div>
+
+
+            <!-- Image 12 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/458219325_2963532477118498_3979933867752698232_n.jpg' %}" alt="Event 5" class="img-fluid rounded">
+                    <figcaption>Group Photo: Friends Love Assembly at Ibelema's late mother's funeral</figcaption>
+                </figure>
+            </div>
+
+            <!-- Image 13 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/458340759_2963532573785155_6721570053908638772_n.jpg' %}" alt="Event 5" class="img-fluid rounded">
+                    <figcaption>Funeral Service: Joy, Prisca and Mrs. Uwakwe</figcaption>
+                </figure>
+            </div>
+
+
+            <!-- Image 14 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/458502606_2969408886530857_5237446282475349942_n.jpg' %}" alt="Event 5" class="img-fluid rounded">
+                    <figcaption>FLA Visit to baby Adina and her mother, Deborah</figcaption>
+                </figure>
+            </div>
+
+
+            <!-- Image 15 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/458502606_2969408886530857_5237446282475349942_n.jpg' %}" alt="Event 5" class="img-fluid rounded">
+                    <figcaption>Members Interacting: FLA Visit to baby Adina and her mother, Deborah</figcaption>
+                </figure>
+            </div>
+
+
+            <!-- Image 16 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/458647306_2969255403212872_4081389870794798083_n.jpg' %}" alt="Event 5" class="img-fluid rounded">
+                    <figcaption>Group Photo: Friends Love Assembly's Visit to Welcome Baby Adina</figcaption>
+                </figure>
+            </div>
+
+
+            <!-- Image 17 -->
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/458755242_2969255616546184_2488003847086416894_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>FLA Visit to Deborah Diri</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/Gladys.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Mrs. Uwakwe</figcaption>
+                </figure>
+            </div>
+
+ <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/Messenger_creation_5fd17510-b478-4e77-ab0e-6a9ef7793312.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Mercy Anucha - FLA Visit to Sea View</figcaption>
+                </figure>
+            </div>
+
+ <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_388336660997184.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>FLA Hospital Visitation 2024</figcaption>
+                </figure>
+            </div>
+
+ <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_396304743403665.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Mrs. Uwakwe and Mercy Anucha - Sea View</figcaption>
+                </figure>
+            </div>
+
+             <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_396588869939492.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>25th December 2023 morning outing</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_514673001202124.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>FLA Hospital Visitation 2024</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_540616341982939.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>FLA Hospital Visitation 2024</figcaption>
+                </figure>
+            </div>
+
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_540616341982939.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Birthday Voucher presentation to Chief Whip 2</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_767426028908858.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Wazobia Fizz Bar CEO</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_396588869939492.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>25th December 2023 morning outing</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_774623008108775.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Wilcox Kingsley - Chief Scribe</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_831745612119294.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Back-view 2023 25th December Morning</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_910310460791719.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Chid Dedication Ceremony of Chief Scribe and Ex-Member Lovina Edward</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_1056247409375797.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Hospital Visitation 2024</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_1074425104026273.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Hospital Visitation 2024</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_1099386048641723.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Hospital Visitation 2024</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_1160962408798225.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Educational Titan Learning Hub CEO</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_1304310350535579.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Hospital Visitation 2024</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_1441757179991714.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Hospital Visitation 2024</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_1609806909970563.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Mayor and Chief Whip 1 - Hospital Visitation 2024</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_1631182877466032.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Founder/Deputy Mayor - Gift Jumbo</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_3801125550110966.png' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>ROAD MAP - Hospital Visitation</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_3993899460847175.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Hospital Visitation 2024</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_6895996697191310.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Moving to deliver the mandate</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/received_8989356494416799.jpeg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Awesome faces</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/340267282_114244021635661_8754107045547651551_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Lord Mark and Mercy</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/340177504_2588261818147429_1607610885483457664_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Couples Goal</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/350532895_771399814687663_4915772902971002881_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>FLA Men Memory Lane</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/350537044_552938313708282_1319451441335201005_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Chilled Sunday - FLA at Giltons Resort for Swimming</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/359826818_6352173801543570_3053277204975769873_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Birthday Gift - 2023</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/366080463_6418878068206476_7116674812651384110_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Money Bag - DoT</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/C.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Deborah Diri</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/408926538_2759943197477428_3547156000524844930_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Chief Whip 1</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/410968559_2766259666845781_2109415179028145792_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Dinner Night 2023</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/410959178_2766265983511816_4875202508933725576_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Thanksgiving Service</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/420099290_2788918551246559_8496674577457272806_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Dinner Night 2023</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/420200167_2788919947913086_4367949628685187795_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Birthday Gift 2023</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/420497216_2788920037913077_7737442384685577457_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Birthday Gift 2023</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/420546606_2788920101246404_1169258130880439481_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>End of Year Award</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/420512006_2788920147913066_56033450315649363_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>End of Year Award</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/420637459_2788920194579728_2583019745135315268_n (1).jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>End of Year Award</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/420637270_2788920564579691_3314947235954800546_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Happiness Alozie</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/420634649_2788920464579701_7282924929037301327_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>FLA at Omega Fire Ministries for 2023 Thanksgiving Service</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/420639246_2788920327913048_6171163954710488037_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Ex-Member Eze Chidiadi and Friend</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/420517358_2788920247913056_6959850862221249292_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>End of Year Award</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/459923819_2976454432492969_1236092892903700328_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Friends Love Members at Abia State for the burial of Happiness' Late father</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/459925189_2976454482492964_3387822382978892488_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Abia State - FLA</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/460182511_2976454582492954_5873897544892096886_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Getting ready for the burial</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/461614172_2991464870991925_7055244799785736375_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Medical Centre 1.0</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/461678721_3355251214609532_9211943930383188642_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Chief Whip and Happiness</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/461596433_3355251291276191_6014348624476673839_n.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Chief Whip and Mercy</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/20241001_142423.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Gift souvenir presentation for Hospital Visitation</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/20241001_142407.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Gift souvenir presentation for Hospital Visitation</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/20241001_142402.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Gift souvenir presentation for Hospital Visitation</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/20241001_142357.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Gift souvenir presentation for Hospital Visitation</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/20241001_141043.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Gift souvenir presentation for Hospital Visitation</figcaption>
+                </figure>
+            </div>
+
+             <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/20241001_141036.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Gift souvenir presentation for Hospital Visitation</figcaption>
+                </figure>
+            </div>
+
+             <div class="col-md-3 gallery-item">
+                <figure class="text-center">
+                    <img src="{% static 'images/20241001_141028.jpg' %}" alt="Event 16" class="img-fluid rounded">
+                    <figcaption>Gift souvenir presentation for Hospital Visitation</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ylrBkGhhHJAdV8c+UdHRX58MaaTtSMfddtjOxWpkEVkKHQuUVFG7c9DkG5UOTtXn" crossorigin="anonymous"></script>
+</body>
+</html>

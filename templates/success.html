@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/6I5Z2N4Z5boHGvYd3io38A2s/QfRvH+u06OZyT" crossorigin="anonymous">
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bg-light text-center">
+
+    <div class="container mt-5">
+        <h1 class="text-success">Registration Successful!</h1>
+        <p class="lead">Thank you for registering. We are excited to have you join our community.</p>
+
+        <!-- Home button -->
+        <a href="{% url 'home' %}" class="btn btn-primary">Go to Home</a>
+    </div>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ylrBkGhhHJAdV8c+UdHRX58MaaTtSMfddtjOxWpkEVkKHQuUVFG7c9DkG5UOTtXn" crossorigin="anonymous"></script>
+</body>
+</html>

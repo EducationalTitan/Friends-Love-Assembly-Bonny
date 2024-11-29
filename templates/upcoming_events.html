@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events - Friends Love Assembly</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLiGLPzvBxZBB7crLxBXiTqaMa1mO60F1D6Z9I7EINeeTZFtne8/d4wPg9ew1kns" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        /* Hero Banner */
+        .hero {
+            background: url('{% static 'images/42341.jpg' %}') center center/cover no-repeat;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        /* Event Card */
+        .event {
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #fff, #f0f4f7);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .event:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .event h2 {
+            font-size: 26px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .event-date {
+            font-size: 18px;
+            color: #e74c3c;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .event-date i {
+            margin-right: 10px;
+        }
+        .event-description {
+            font-size: 16px;
+            color: #34495e;
+        }
+
+        /* Home Button */
+        .btn-home {
+            background-color: #3498db;
+            color: #fff;
+            font-weight: 500;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn-home:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Banner -->
+    <section class="hero text-center">
+        <h1>Upcoming Events</h1>
+    </section>
+
+    <!-- Container for Events -->
+    <div class="container my-5">
+        <!-- Home Button -->
+        <a href="{% url 'home' %}" class="btn btn-home mb-4">Home</a>
+
+        <!-- Events Section -->
+        <div class="event">
+            <h2>Medical Centre Meets 1.0</h2>
+            <div class="event-date">
+                <i class="bi bi-calendar"></i> 1st October, 2024
+            </div>
+            <div class="event-description">
+                Join Friends Love Assembly for a heartwarming outreach as we visit hospitals to share love, support, and encouragement with patients and their families.
+                This event is aimed at bringing hope and joy to those going through challenging health situations by offering kind words, small gifts, and our time to listen and care.
+            </div>
+        </div>
+
+        <div class="event">
+            <h2>Double Combo Hosting Meeting</h2>
+            <div class="event-date">
+                <i class="bi bi-calendar"></i> 3rd and 17th November, 2024
+            </div>
+            <div class="event-description">
+                Join us for a unique and vibrant experience at the Double Combo Hosting Meeting organized by members!
+                Expect exciting activities, insightful conversations, and a friendly atmosphere that will leave you inspired.
+            </div>
+        </div>
+
+        <div class="event">
+            <h2>November & December Birthday Celebration Bash!</h2>
+            <div class="event-date">
+                <i class="bi bi-calendar"></i> November and December, 2024
+            </div>
+            <div class="event-description">
+                Join us as we celebrate the special November and December birthdays at Friends Love Assembly! Whether you're a birthday celebrant or simply part of the fun, enjoy great company, entertainment, and surprises.
+            </div>
+        </div>
+
+        <div class="event">
+            <h2>Friends Love Assembly End of Year Party</h2>
+            <div class="event-date">
+                <i class="bi bi-calendar"></i> 24th December, 2024
+            </div>
+            <div class="event-description">
+                The End of Year Party promises to be an evening filled with celebration and joy. Join us for a night featuring dinner, cocktails, live performances, games, raffles, and more.
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-GlQDyjfAql1E7F/O44JX0zmYROd2c8dsyQPeKGVArHTvW9Z9FvOd3EWES2f0nVVT" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+</body>
+</html>
