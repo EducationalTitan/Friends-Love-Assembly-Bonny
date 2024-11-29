@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Friends Love Assembly</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/FRIENDS LOVE.png' %}" alt="Club Logo">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about-us/">About Us</a>
+            <a href="/gallery/">Gallery</a>
+            <a href="/events/">Events</a>
+            <a href="/register/">Register</a>
+            {% if user.is_authenticated %}
+                <a href="/logout/">Logout</a>
+            {% else %}
+                <a href="/login/">Login</a>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Friends Love Assembly</p>
+    </footer>
+</body>
+</html>

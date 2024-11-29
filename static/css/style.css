@@ -1,0 +1,24 @@
+/* Assuming the home page has a class or ID like 'home-page' */
+.home-page {
+    background-color: #000000; /* Set background color to black */
+    color: #FFFFFF; /* Set text color to white */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style specific text elements */
+.home-page a {
+    color: #FFFFFF; /* Change link color to white or another color */
+}
+
+.home-page h1, .home-page h2, .home-page p {
+    color: #FFFFFF; /* Change heading and paragraph font color */
+}
+
+/* Optional: Change specific section backgrounds and font colors */
+.home-page .section-title {
+    background-color: #333333; /* Dark gray section background */
+    color: #FFFFFF; /* White text color */
+}
+
